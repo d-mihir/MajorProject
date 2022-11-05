@@ -1,0 +1,129 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mihir Deshpande, VCE, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.7.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+E:\lcd_keypad\v1\v1.uvprojx
+Project File Date:  10/25/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f401xe.s...
+compiling system_stm32f4xx.c...
+v1.c(2): warning: In file included from...
+./lcd.h(2): warning: // comments are not allowed in this language [-Wcomment]
+// data pins to port b
+^
+./lcd.h(6): warning: no previous prototype for function 'delayms' [-Wmissing-prototypes]
+void delayms(int n)
+     ^
+./lcd.h(6): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delayms(int n)
+^
+static 
+./lcd.h(12): warning: no previous prototype for function 'lcd_cmd' [-Wmissing-prototypes]
+void lcd_cmd(unsigned char cmd)
+     ^
+./lcd.h(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_cmd(unsigned char cmd)
+^
+static 
+./lcd.h(25): warning: no previous prototype for function 'lcd_data' [-Wmissing-prototypes]
+void lcd_data(char data)
+     ^
+./lcd.h(25): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_data(char data)
+^
+static 
+./lcd.h(36): warning: no previous prototype for function 'port_init' [-Wmissing-prototypes]
+void port_init(void)
+     ^
+./lcd.h(36): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void port_init(void)
+^
+static 
+./lcd.h(42): warning: no previous prototype for function 'lcd_init' [-Wmissing-prototypes]
+void lcd_init(void)
+     ^
+./lcd.h(42): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_init(void)
+^
+static 
+v1.c(12): warning: // comments are not allowed in this language [-Wcomment]
+        lcd_init(); // initialize lcd
+                    ^
+v1.c(26): warning: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+                if(strcmp(temp,'0')){ // if key is not pressed
+                          ^~~~
+                          &
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                             ^
+v1.c(26): warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+                if(strcmp(temp,'0')){ // if key is not pressed
+                               ^~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(125): note: passing argument to parameter here
+extern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+                                                                  ^
+v1.c(63): warning: no newline at end of file [-Wnewline-eof]
+                */
+                  ^
+10 warnings generated.
+compiling v1.c...
+linking...
+Program Size: Code=1152 RO-data=420 RW-data=0 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\v1.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/mihir/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/mihir/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
