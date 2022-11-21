@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"gfx01m1_lcd\startup_stm32f411xe.o"
+"gfx01m1_lcd\stm32f4xx_hal_tim.o"
+"gfx01m1_lcd\stm32f4xx_hal_dma.o"
+"gfx01m1_lcd\stm32f4xx_hal_gpio.o"
+"gfx01m1_lcd\stm32f4xx_hal_flash_ex.o"
+"gfx01m1_lcd\stm32f4xx_hal_spi.o"
+"gfx01m1_lcd\stm32f4xx_hal.o"
+"gfx01m1_lcd\stm32f4xx_hal_flash_ramfunc.o"
+"gfx01m1_lcd\stm32f4xx_hal_tim_ex.o"
+"gfx01m1_lcd\stm32f4xx_hal_pwr.o"
+"gfx01m1_lcd\stm32f4xx_hal_cortex.o"
+"gfx01m1_lcd\stm32f4xx_hal_flash.o"
+"gfx01m1_lcd\stm32f4xx_hal_pwr_ex.o"
+"gfx01m1_lcd\stm32f4xx_hal_rcc_ex.o"
+"gfx01m1_lcd\stm32f4xx_hal_rcc.o"
+"gfx01m1_lcd\stm32f4xx_hal_dma_ex.o"
+"gfx01m1_lcd\stm32f4xx_hal_msp.o"
+"gfx01m1_lcd\main.o"
+"gfx01m1_lcd\stm32f4xx_it.o"
+"gfx01m1_lcd\my_ili9341.o"
+"gfx01m1_lcd\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "gfx01m1_lcd\gfx01m1_lcd.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "gfx01m1_lcd.map" -o gfx01m1_lcd\gfx01m1_lcd.axf
