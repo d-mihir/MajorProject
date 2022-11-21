@@ -1,0 +1,272 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mihir Deshpande, VCE, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.7.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+E:\glcd\v2\v2.uvprojx
+Project File Date:  11/06/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling system_stm32f4xx.c...
+assembling startup_stm32f401xe.s...
+v1.c(2): warning: In file included from...
+./delay.h(5): warning: unused parameter 'ms' [-Wunused-parameter]
+void delay(uint32_t ms)
+                    ^
+./delay.h(5): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+void delay(uint32_t ms)
+     ^
+./delay.h(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay(uint32_t ms)
+^
+static 
+./delay.h(10): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+v1.c(3): warning: In file included from...
+./bitmap.h(5): warning: no previous extern declaration for non-static variable 'logo' [-Wmissing-variable-declarations]
+const unsigned char logo [] = {
+                    ^
+./bitmap.h(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char logo [] = {
+      ^
+v1.c(4): warning: In file included from...
+./glcd.h(5): warning: // comments are not allowed in this language [-Wcomment]
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+                                            ^
+./glcd.h(6): warning: no previous extern declaration for non-static variable 'numRows' [-Wmissing-variable-declarations]
+uint8_t numRows = 64;
+        ^
+./glcd.h(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t numRows = 64;
+^
+./glcd.h(7): warning: no previous extern declaration for non-static variable 'numCols' [-Wmissing-variable-declarations]
+uint8_t numCols = 128;
+        ^
+./glcd.h(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t numCols = 128;
+^
+./glcd.h(8): warning: no previous extern declaration for non-static variable 'Graphic_Check' [-Wmissing-variable-declarations]
+uint8_t Graphic_Check = 0;
+        ^
+./glcd.h(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Graphic_Check = 0;
+^
+./glcd.h(47): warning: implicit declaration of function 'ST7920_SendCmd' [-Wimplicit-function-declaration]
+                ST7920_SendCmd(0x80 | y);
+                ^
+./glcd.h(52): warning: implicit declaration of function 'ST7920_SendCmd' [-Wimplicit-function-declaration]
+                ST7920_SendCmd(0x80 | (y-32));
+                ^
+./glcd.h(57): warning: implicit declaration of function 'ST7920_SendData' [-Wimplicit-function-declaration]
+                ST7920_SendData(0);
+                ^
+./glcd.h(65): warning: implicit declaration of function 'ST7920_SendCmd' [-Wimplicit-function-declaration]
+        ST7920_SendCmd(0x01);   // clear the display using command
+        ^
+./glcd.h(38): warning: no previous prototype for function 'ST7920_Clear' [-Wmissing-prototypes]
+void ST7920_Clear()
+     ^
+./glcd.h(38): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ST7920_Clear()
+^
+static 
+./glcd.h(38): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void ST7920_Clear()
+                 ^
+./glcd.h(77): warning: no previous prototype for function 'ST7920_Update' [-Wmissing-prototypes]
+void ST7920_Update(void)
+     ^
+./glcd.h(77): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ST7920_Update(void)
+^
+static 
+./glcd.h(99): warning: implicit declaration of function 'ST7920_SendCmd' [-Wimplicit-function-declaration]
+    ST7920_SendCmd(0x30);  // 8bit mode
+    ^
+./glcd.h(85): warning: no previous prototype for function 'ST7920_Init' [-Wmissing-prototypes]
+void ST7920_Init (void)
+     ^
+./glcd.h(85): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ST7920_Init (void)
+^
+static 
+./glcd.h(126): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for(int i=0;i<8;i++)
+        ^
+./glcd.h(126): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+./glcd.h(184): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+v1.c(5): warning: In file included from...
+./horse.h(5): warning: no previous extern declaration for non-static variable 'horse1' [-Wmissing-variable-declarations]
+const unsigned char horse1 [] = {
+                    ^
+./horse.h(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse1 [] = {
+      ^
+./horse.h(73): warning: no previous extern declaration for non-static variable 'horse2' [-Wmissing-variable-declarations]
+const unsigned char horse2 [] = {
+                    ^
+./horse.h(73): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse2 [] = {
+      ^
+./horse.h(140): warning: no previous extern declaration for non-static variable 'horse3' [-Wmissing-variable-declarations]
+const unsigned char horse3 [] = {
+                    ^
+./horse.h(140): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse3 [] = {
+      ^
+./horse.h(207): warning: no previous extern declaration for non-static variable 'horse4' [-Wmissing-variable-declarations]
+const unsigned char horse4 [] = {
+                    ^
+./horse.h(207): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse4 [] = {
+      ^
+./horse.h(274): warning: no previous extern declaration for non-static variable 'horse5' [-Wmissing-variable-declarations]
+const unsigned char horse5 [] = {
+                    ^
+./horse.h(274): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse5 [] = {
+      ^
+./horse.h(341): warning: no previous extern declaration for non-static variable 'horse6' [-Wmissing-variable-declarations]
+const unsigned char horse6 [] = {
+                    ^
+./horse.h(341): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse6 [] = {
+      ^
+./horse.h(409): warning: no previous extern declaration for non-static variable 'horse7' [-Wmissing-variable-declarations]
+const unsigned char horse7 [] = {
+                    ^
+./horse.h(409): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse7 [] = {
+      ^
+./horse.h(477): warning: no previous extern declaration for non-static variable 'horse8' [-Wmissing-variable-declarations]
+const unsigned char horse8 [] = {
+                    ^
+./horse.h(477): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse8 [] = {
+      ^
+./horse.h(545): warning: no previous extern declaration for non-static variable 'horse9' [-Wmissing-variable-declarations]
+const unsigned char horse9 [] = {
+                    ^
+./horse.h(545): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse9 [] = {
+      ^
+./horse.h(613): warning: no previous extern declaration for non-static variable 'horse10' [-Wmissing-variable-declarations]
+const unsigned char horse10 [] = {
+                    ^
+./horse.h(613): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned char horse10 [] = {
+      ^
+v1.c(72): warning: no newline at end of file [-Wnewline-eof]
+        }
+         ^
+v1.c(4): warning: In file included from...
+./glcd.h(5): warning: no previous extern declaration for non-static variable 'startRow' [-Wmissing-variable-declarations]
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+        ^
+./glcd.h(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+^
+./glcd.h(5): warning: no previous extern declaration for non-static variable 'startCol' [-Wmissing-variable-declarations]
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+                  ^
+./glcd.h(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+^
+./glcd.h(5): warning: no previous extern declaration for non-static variable 'endRow' [-Wmissing-variable-declarations]
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+                            ^
+./glcd.h(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+^
+./glcd.h(5): warning: no previous extern declaration for non-static variable 'endCol' [-Wmissing-variable-declarations]
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+                                    ^
+./glcd.h(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t startRow, startCol, endRow, endCol; // coordinates of the dirty rectangle
+^
+./glcd.h(9): warning: no previous extern declaration for non-static variable 'image' [-Wmissing-variable-declarations]
+uint8_t image[(128 * 64)/8];
+        ^
+./glcd.h(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t image[(128 * 64)/8];
+^
+./glcd.h(124): warning: unused function 'SendByteSPI' [-Wunused-function]
+static void SendByteSPI(uint8_t byte)
+            ^
+37 warnings generated.
+compiling v1.c...
+linking...
+.\Objects\v2.axf: Error: L6218E: Undefined symbol ST7920_SendCmd (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol ST7920_SendData (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol ST7920_DrawBitmap (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol delayUs (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol ST7920_SendString (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol ST7920_GraphicMode (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol DrawCircle (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol DrawLine (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol DrawRectangle (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol DrawFilledRectangle (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol DrawFilledCircle (referred from v1.o).
+.\Objects\v2.axf: Error: L6218E: Undefined symbol DrawFilledTriangle (referred from v1.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 12 error messages.
+".\Objects\v2.axf" - 12 Error(s), 37 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/mihir/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/mihir/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
